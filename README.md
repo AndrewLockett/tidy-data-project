@@ -3,7 +3,7 @@ Coursera 'Getting & Cleaning Data' Project - Tidy Data
 
 ##This repo contains the following:
 
-- README.md - this file describing
+- README.md - this file
 - CodeBook.md - more detail on the HAR_tidy.txt data set
 - run_analysis.R - the R script used to create the tidy data set
 
