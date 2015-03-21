@@ -1,24 +1,20 @@
 #Tidy Data Project
-Coursera 'Getting &amp; Cleaning Data' Project - Tidy Data 
+Coursera 'Getting & Cleaning Data' Project - Tidy Data 
 
 ##This repo contains the following:
-- Readme.md - this file describing the process to create the tidy data set (see below)
-- Codebook.md - describing the HAR_tidy.txt data set
+
+- README.md - this file describing
+- CodeBook.md - more detail on the HAR_tidy.txt data set
 - run_analysis.R - the R script used to create the tidy data set
 
-##Process used to create tidy data:
-- read in source data zip file from url
-- read in the test data set (& join subjects / activities)
-- read in the train data set (& join subjects / activities)
-- union test + train data sets together
-- add activity descriptions. This creates a HAR_full data set of 564 columns and 10,299 rows)
-- extract only the mean / standard deviation variables + the activity/subject (81 columns)
-- rename variables to remove () & - characters (to by syntactically valid in R). This creates as HAR_part data set of 81 columns and 10,299 rows)
-- create a summarised table with one observation per activity & subject combination, with the mean of each of the variables. This creates the HAR_tidy data set for submission with 81 columns and 180 rows.
-- provide cross-tab tables showing counts for HAR_part and HAR_tidy
-- output the HAR_tidy data set to a txt file. This HAR_tidy.txt file is the one submitted to Coursera.
+##run_analysis.R script:
+The run_analysis.R script should be saved to and run from the working directory. It carries out the following process (for full details see the CodeBook):
+
+- downloads the original source data zip file
+- performs the data cleaning as documented in the CodeBook
+- outputs the HAR_tidy.txt data file described in the CodeBook.
 
 ##Code to read the tidy data set:
-Place the HAR_tidy.txt file in your working directory.
+Place the HAR_tidy.txt file in your working directory. Then run following script.
 
 df_submitted <- read.table("HAR_tidy.txt", header=TRUE, sep=" ")
