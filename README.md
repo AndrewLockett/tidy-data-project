@@ -1,10 +1,10 @@
 #Tidy Data Project
 Coursera 'Getting & Cleaning Data' Project - Tidy Data 
 
-##This repo contains the following:
+##Repo contains the following files:
 
 - README.md - this file
-- CodeBook.md - more detail on the HAR_tidy.txt data set
+- CodeBook.md - more detail on the processing used to create HAR_tidy.txt data set
 - run_analysis.R - the R script used to create the tidy data set
 
 ##run_analysis.R script:

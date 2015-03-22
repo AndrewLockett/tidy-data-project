@@ -1,7 +1,7 @@
 #Codebook for Tidy Data Set
 
 ##Project Description:
-This codebook describes the data cleaning process used for the Coursera 'Getting and Cleaning Data' course project. The task related to cleaning a set of data relating to 'Human Activity Recognition' gathered using Smartphone accelerometer and gyroscope sensors. In brief the process involved (see below for more detail):
+This codebook describes the data cleaning process used for the Coursera 'Getting and Cleaning Data' course project. The task was to create a tidy data set relating to 'Human Activity Recognition' gathered using Smartphone accelerometer and gyroscope sensors. In brief the process involved (see below for more detail):
 
 - Downloading the data set from the UCI Machine Learning Repository
 - Combining several data sets together
@@ -16,9 +16,19 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 See more information on this this data set at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+##Raw data tables used
+- features.txt (a list of the variable names measured by the x files)
+- activity_labels.txt (descriptions for the 6 types of activities recorded)
+- x_test.txt (the x variables measured for test subjects)
+- y_test.txt (the activities relating to the above data)
+- subject_test.txt (the subjects related to the above data)
+- x_train.txt (the x variables measured for training subjects)
+- y_train.txt (the activities relating to the above data)
+- subject_train.txt (the subjects related to the above data)
+
 
 ##Process used to create tidy data:
-- read in source data zip file from url
+- download the source data zip file from url
 - read in the test data set (& join subjects / activities)
 - read in the train data set (& join subjects / activities)
 - union test + train data sets together
@@ -52,7 +62,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-##Variable Names:
+##Variable Names in the HAR_tidy data set:
 - activity
 - subject
 - tBodyAcc.mean.X
